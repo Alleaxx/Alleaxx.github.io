@@ -1,0 +1,283 @@
+/*
+Темно-темно синий главный фон
+background-color: rgb(4,7,21);
+border-color: rgb(103, 179, 207);
+Вы дохлые! Какие вам
+rgb(187,222,255) - голубой цвет текста для темно-синего фона
+rgb(28, 31, 77) - темно-синий фон элементов
+rgb(4, 61, 106) - граница при темно-синем фоне
+
+rgb(68, 84, 191) - дополнительный светло-синий фон
+rgb(14, 26, 54) - дополнительный темно-синий фон
+rgb(9, 11, 23) - дополнительный темно-синий фон
+rgb(237, 185, 11) - дополнительный желтый цвет текста
+rgb (19,46,91) - еще фоновый синий цвет!
+
+rgb(157, 6, 6) - красный фон при выделении
+rgb(255, 202, 101) - желтый на красном при выделении 
+rgb(174, 4, 5) - граница красного
+
+______________________
+Легкий красный фон
+background-color: rgb(120, 55, 90) легкий красный фон
+border-color: rgb(196, 103, 123) граница для легкого красного фона
+color: rgb(241, 233, 233) цвет текста для легкого красного фона
+*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd, 
+ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header{
+                 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+    *{
+        font-family: "Calibri";
+        box-sizing: border-box;
+    }
+    html{
+        background-color: rgb(244, 244, 244);
+    }
+    a{
+        color: rgb(28, 31, 77);
+    }
+    a:hover{
+        color:rgb(237, 185, 11);
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+	h1,h2,h3{
+        color: rgb(40, 40, 40);
+        border-bottom: 1px solid rgb(204, 204, 220);
+		font-size: 32px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+        margin-left: 10px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    h3{
+		font-size: 24px;
+    }
+    
+    /* Все что на белом фоне */
+    #main,.mainHeader{
+        background-color: rgb(244, 244, 244);
+        min-width: 720px;
+        width: 50%;
+        margin-top: 10px 25% 0 25%;
+    }
+    #main{
+        box-shadow: 0 0 8px rgba(28, 31, 77, 0.85);
+    }    
+     /* Хедер */
+    #header{
+        background-color: #f4f4f4;
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+     /* Футер */
+    #footer{       
+        background-color: rgb(28, 31, 77);
+        color: rgb(237, 185, 11);
+        text-align: center;
+        clear: both;
+    }
+    #footer p{
+        font-size: 18px;
+        font-family: "Calibri Light";
+    }
+
+    /* Основное содержимое сайта без хедера и футера и главной навигации */
+    #content{
+        clear: both;
+        min-width: 500px;
+        margin: 5px;
+        padding-top: 5px;   
+    }
+    /* Главная часть слева от доп. навигации */
+    #contentMain{
+        width: 80%;
+        float: left;
+    }
+    /* Главное навигационное меню */
+    #nav{
+        background-color: rgb(28, 31, 77);
+    }
+    #nav img{
+        height: 45px;
+        width: 36px;
+        float: left;
+        vertical-align: middle;
+        margin:3px 10px 3px 10px;
+    }
+    #nav li{
+        float: left;
+        list-style: none;     
+        border-radius: 15px 0px 15px 0px;  
+    }
+    #nav a{
+        display: block;
+        color: rgb(237, 185, 11);
+        padding: 10px 25px;
+        text-decoration: none;
+        font-size: 24px;     
+        transition: background-color 0.1s;
+    }
+    #nav a:hover{
+        background-color: rgb(157, 6, 6);
+        color:rgb(255, 202, 101);
+    }
+    #nav:after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    
+/*Дополнительная Навигация*/
+    #navAddmenu{
+        height: 100%;
+        float: left;
+        margin-left: 80%;
+        width: 20%;
+        margin: 5px 0 1% 0;
+        background-color: white;
+    }
+    #navAddmenu li{
+        list-style: none;
+        list-style-position: inside;
+    }
+    #navAddmenu ul{
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #navAddmenu a{
+        display: block;
+        color: rgb(40, 40, 40);
+        padding: 10px 5px;
+        text-decoration: none;
+
+        font-size: 16px;
+        text-align: center;
+    }
+    .navAddmenuHeader{
+        font-size: 22px;
+        font-weight: bold;
+        background-color: rgb(28, 31, 77);
+    }
+    #navAddmenu .navAddmenuHeader a{
+        color: rgb(187,222,255);
+    }
+    #navAddmenu a:hover{
+        background-color: rgb(157, 6, 6);
+        color: rgb(255, 202, 101);
+        border-radius: 3px 0px 3px 0px;
+    }
+    #navAddmenu .navAddmenuHeader a:hover{
+        cursor: default;
+        background-color: rgb(17, 19, 48);
+        color: rgb(255, 202, 101);
+    }
+    #navAddmenu:after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    /* Контейнер новости, общие параметры текста в нем */
+    .listItem{
+        margin: 10px 10px 20px 10px;
+        box-shadow: 0 0 8px rgba(28, 31, 77, 0.55);
+        }
+            .listItem h2, .listItem ul{
+                margin: 5px;
+                padding-bottom: 3px;
+                font-size: 18px;
+            }
+            .listItem ul{
+                margin: 0px 0px 0px 25px;
+            }
+            .listItem img{
+                width: 90%;
+                border: 1px solid rgb(187,222,255);
+            }
+
+        /* Заголовок новости с названием и датой */
+        .listHeaderItem{
+            border-bottom: 1px solid rgb(200, 200, 200);
+            background-color: rgb(28, 31, 77);
+            height: 40px;
+        }
+            /* Параметры текста заголовка */
+            .listHeaderName{
+                float: left;
+                text-decoration: none;
+                width: 75%;
+                padding: 5px;  
+                text-align: left;    
+                font-size: 22px;
+                font-weight: 600;
+                font-family: "Segoe Ui";
+                color: rgb(187,222,255);
+            }
+            .listHeaderName:hover{
+                cursor: default;
+                background-color: rgb(17, 19, 48);
+                color: rgb(255, 202, 101);
+            }
+            .listHeaderDate{
+                padding: 10px;
+                margin-left: 75%;
+                width: 25%;
+                text-align: center;
+                font-size: 16px;
+                color: rgb(187,222,255);
+            }
+        .listDescrItem{
+            padding:5px 5px 10px 5px;
+            font-size: 18px;
+            background-color: white;
+        }
+        .listCategoryItem{
+            border-bottom: 1px solid rgb(204, 204, 220);
+            font-size: 16px;
+            padding: 1px 5px 1px 1px;
+            color: rgb(40, 40, 40);
+        }
+        .listCategoryItem p{
+            padding: 0 10px 0 10px;
+            margin: 1px 0px 1px 0px;
+            width: 50%;
+            background-color: rgb(45, 50, 126);
+            color:rgb(255, 202, 101);
+            border-radius: 0px 0 15px 0;
+        }
+        .listCategoryItemWarning p{
+            padding: 0 10px 0 15px;
+            width: 25%;
+            font-size: 16px;
+            background-color: rgb(45, 50, 126);
+            color:rgb(255, 202, 101);
+            border-radius: 0px 0 15px 0;
+        }
+
+    .Descr,.Descr p{
+        margin: 0px 10px 10px 10px;
+		font-size: 18px;
+    }
+    .Descr p{
+        margin-left:15px;
+    }
+
+    /* Предупреждение о недоделанной странице */
+    .warning{
+        padding: 15px;
+        margin: 15px 0px 5px 0px;
+        background-color: rgb(255, 255, 255);
+        border-left: rgb(28, 31, 77) 15px solid;
+        font-size: 18px;
+    }
+    
