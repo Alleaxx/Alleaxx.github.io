@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="monstersStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пузырные монстры</title>
+</head>
+<body>
+    <canvas width="64px" height="64px" id="canvas"></canvas>
+    <script>
+
+        var monster = {
+            /*  Состояния монстра:
+                0 - обычное
+                1 - испуганное */
+            state:0,
+            image:"monster.png",
+            };
+        var canvas = document.querySelector("canvas");
+        var drawingSurface = canvas.getContext("2d");
+        var monsterImage = new Image();
+
+        monsterImage.addEventListener("load",imageLoadHandler,false);
+        monsterImage.src="monster.png";
+        function imageLoadHandler()
+        {
+            drawingSurface.drawImage(monsterImage,0,0);
+        }
+
+        window.addEventListener("keydown",keyDownHandler,false);
+        function keyDownHandler(){
+            becomeScared();
+        }
+        
+        function becomeScared(){
+            monster.state = 1;
+            setTimeout(becomeNormal,1000);
+            render();
+        }
+        function becomeNormal(){
+            monster.state = 0;
+            render();
+        }
+        function render(){
+            drawingSurface.drawImage(monsterImage,64*monster.state,0,64,64,0,0,64,64)
+        }
+
+        console.log("Конец");
+    </script>
+</body>
+</html>
