@@ -1,0 +1,107 @@
+body{
+    font-family: Helvetica, sans-serif;
+}
+div.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    margin-bottom: 2px;
+}
+.container .description{
+    margin-top: 4px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    font-size: 18px;
+    text-align: center;
+}
+
+table{
+    background-color: ghostwhite;
+    color: rgb(60, 60, 60);
+    border-collapse: collapse;
+
+    font-family: "Verdana";
+    font-size: 16px;    
+}
+
+    td,th{
+        text-align: center;
+
+        padding: 5px 15px 5px 15px;
+        background-color: rgb(240, 240, 240);
+        transition: 0.15s;
+
+        border: 1px solid gainsboro;
+        border-radius: 2px;
+    }
+    th{  
+        background-color: rgb(230, 230, 230);
+        color: rgb(60, 60, 60);
+        font-weight: normal;
+    }
+    th.mainHeader{
+        background-color: rgb(225, 225, 225);
+        border-bottom: 1px solid rgb(200, 200, 200);
+        padding: 8px 15px 8px 15px;  
+        font-weight: bolder;
+    }
+    td.Activity0{
+        background-color: rgb(202, 170, 170);
+        color: rgb(31, 31, 31);
+    }
+        td.Activity0.Info{
+            border: 1px solid rgb(182, 150, 150);
+        }
+    td.Activity1{
+        background-color: rgb(255, 199, 206);
+        color: brown;
+    }
+        td.Activity1.Info{
+            border: 1px solid rgb(235, 179, 186);
+        }
+    td.Activity2{
+        background-color: rgb(255, 235, 156);
+        color: rgb(173, 113, 54);
+    }
+        td.Activity2.Info{
+            border: 1px solid rgb(235, 215, 136);
+        }
+    td.Activity3{
+        background-color: rgb(198, 239, 206);
+        color: green;
+    }
+        td.Activity3.Info{
+            border: 1px solid rgb(178, 219, 184);
+        }
+    td.Activity4{
+        background-color: rgb(199, 231, 253);
+        color: blue;
+    }
+        td.Activity4.Info{
+            border: 1px solid rgb(179, 211, 233);
+        }
+    td.Activity5{
+        background-color: rgb(222, 206, 254);
+        color: purple;
+    }
+        td.Activity5.Info{
+            border: 1px solid rgb(202, 184, 234);
+        }
+
+
+    td:hover,th:hover{
+        background-color: gray;
+        color: white;
+        border: 1px solid rgb(100, 100, 100);
+        cursor: pointer;
+    }
+    th:hover{
+        background-color: rgb(210, 210, 210);
+        color: black;
+        border: 1px solid rgb(200, 200, 200);
+        cursor: default;
+    }
