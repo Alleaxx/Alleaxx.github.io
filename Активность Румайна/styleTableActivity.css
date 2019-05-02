@@ -1,105 +1,96 @@
 body{
     font-family: Helvetica, sans-serif;
+    font-size: 16px;
 }
-div.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.header{
-    margin-bottom: 2px;
-}
-.container .description{
-    margin-top: 4px;
-    margin-left: 5%;
-    margin-right: 5%;
+    .activity{
+        margin: 5px 25%;
+
+        background-color: rgb(252, 252, 252);
+
+        padding: 20px;
+    }
+
+    .activity ul.options{
+        list-style: none;
+    }
+
+    .activity h2, h3{
+        margin: 0;
+        margin-top: 5px;
+        padding: 0;
+
+        border-bottom: 1px solid gainsboro;
+    }
+    .activity li{
+        margin-bottom: 10px;
+    }
+
+    .activity-table{
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: ghostwhite;
+        color: rgb(60, 60, 60);
+        border-collapse: collapse;
     
-    font-size: 18px;
-    text-align: center;
-}
+        font-family: "Verdana"; 
+    }
 
-table{
-    background-color: ghostwhite;
-    color: rgb(60, 60, 60);
-    border-collapse: collapse;
-
-    font-family: "Verdana";
-    font-size: 16px;    
-}
-
-    td,th{
+    .activity-table td,th{
         text-align: center;
 
-        padding: 5px 15px 5px 15px;
+        padding: 5px 15px;
         background-color: rgb(240, 240, 240);
         transition: 0.15s;
 
         border: 1px solid gainsboro;
         border-radius: 2px;
     }
-    th{  
+    .activity-table th{  
         background-color: rgb(230, 230, 230);
         color: rgb(60, 60, 60);
         font-weight: normal;
     }
-    th.mainHeader{
+    .activity-table .header{
         background-color: rgb(225, 225, 225);
-        border-bottom: 1px solid rgb(200, 200, 200);
-        padding: 8px 15px 8px 15px;  
+        padding: 8px 15px;  
         font-weight: bolder;
     }
-    td.Activity0{
-        background-color: rgb(202, 170, 170);
-        color: rgb(31, 31, 31);
+    .activity-table .act-0{
+        background-color: lightgray;
+        color: rgb(64, 64, 64);
     }
-        td.Activity0.Info{
-            border: 1px solid rgb(182, 150, 150);
-        }
-    td.Activity1{
+    .activity-table .act-1{
         background-color: rgb(255, 199, 206);
         color: brown;
     }
-        td.Activity1.Info{
-            border: 1px solid rgb(235, 179, 186);
-        }
-    td.Activity2{
+    .activity-table .act-2{
         background-color: rgb(255, 235, 156);
         color: rgb(173, 113, 54);
     }
-        td.Activity2.Info{
-            border: 1px solid rgb(235, 215, 136);
-        }
-    td.Activity3{
+    .activity-table .act-3{
         background-color: rgb(198, 239, 206);
         color: green;
     }
-        td.Activity3.Info{
-            border: 1px solid rgb(178, 219, 184);
-        }
-    td.Activity4{
+    .activity-table .act-4{
         background-color: rgb(199, 231, 253);
         color: blue;
     }
-        td.Activity4.Info{
-            border: 1px solid rgb(179, 211, 233);
-        }
-    td.Activity5{
+    .activity-table .act-5{
         background-color: rgb(222, 206, 254);
         color: purple;
     }
-        td.Activity5.Info{
-            border: 1px solid rgb(202, 184, 234);
-        }
 
+    .activity-table .no-background{
+        background-color: rgb(240, 240, 240);
+    }
 
-    td:hover,th:hover{
-        background-color: gray;
-        color: white;
-        border: 1px solid rgb(100, 100, 100);
+    .activity-table td:hover{
+        color: black;
+        border: 1px solid rgb(128, 128, 128);
         cursor: pointer;
     }
-    th:hover{
+    .activity-table th:hover{
         background-color: rgb(210, 210, 210);
         color: black;
         border: 1px solid rgb(200, 200, 200);
