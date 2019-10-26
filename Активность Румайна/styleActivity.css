@@ -1,0 +1,108 @@
+body{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+    .activity{
+        margin: 5px 25%;
+
+        background-color: rgb(252, 252, 252);
+
+        padding: 20px;
+    }
+
+    .activity ul.options{
+        list-style: none;
+    }
+
+    .activity h2, h3{
+        margin: 0;
+        margin-top: 5px;
+        padding: 0;
+
+        border-bottom: 1px solid gainsboro;
+    }
+    .activity li{
+        margin-bottom: 10px;
+    }
+
+    .activity-table, .id-activity-table{
+        margin: 15px auto;
+        margin-bottom: 100px;
+
+        background-color: ghostwhite;
+        color: rgb(60, 60, 60);
+        border-collapse: collapse;
+    
+        font-family: "Verdana"; 
+    }
+    .activity-table td,th{
+        text-align: center;
+
+        padding: 5px 15px;
+        background-color: rgb(240, 240, 240);
+        transition: 0.15s;
+
+        border: 1px solid gainsboro;
+        border-radius: 2px;
+    }
+
+    .activity-table th{  
+        background-color: rgb(230, 230, 230);
+        color: rgb(60, 60, 60);
+        font-weight: normal;
+    }
+    .activity-table .header{
+        background-color: rgb(225, 225, 225);
+        padding: 8px 15px;  
+        font-weight: bolder;
+    }
+    .activity-table .act-0{
+        background-color: lightgray;
+        color: rgb(64, 64, 64);
+    }
+    .activity-table .act-1{
+        background-color: rgb(255, 199, 206);
+        color: brown;
+    }
+    .activity-table .act-2{
+        background-color: rgb(255, 235, 156);
+        color: rgb(173, 113, 54);
+    }
+    .activity-table .act-3{
+        background-color: rgb(198, 239, 206);
+        color: green;
+    }
+    .activity-table .act-4{
+        background-color: rgb(199, 231, 253);
+        color: blue;
+    }
+    .activity-table .act-5{
+        background-color: rgb(222, 206, 254);
+        color: purple;
+    }
+
+    .activity-table .no-background{
+        background-color: rgb(240, 240, 240);
+    }
+
+    .activity-table td:hover{
+        color: black;
+        border: 1px solid rgb(128, 128, 128);
+        cursor: pointer;
+    }
+    .activity-table th:hover{
+        background-color: rgb(210, 210, 210);
+        color: black;
+        border: 1px solid rgb(200, 200, 200);
+        cursor: default;
+    }
+
+
+    .id-activity-table td,th{
+        text-align: center;
+
+        background-color: rgb(250,250,250);
+    }
+    .id-activity-table th{
+        background-color: rgb(240, 240, 240);
+    }
