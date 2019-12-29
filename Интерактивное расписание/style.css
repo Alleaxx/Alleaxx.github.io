@@ -1,0 +1,39 @@
+.main{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+td{
+    padding: 6px;
+    background-color: rgb(168, 206, 234);
+}
+
+th{
+    font-size: 1.2em;
+    background-color: rgb(91, 155, 213);
+    color: black;
+    font-weight: 500;
+}
+td.time{
+    background-color: rgb(221, 235, 247);
+}
+.now{
+    background-color: orange;
+}
+.next{
+    background-color: rgb(255, 101, 101);
+}
+.srs{
+    background-color: greenyellow;
+}
+
+#current-time{
+    font-size: 1.2em;
+}
