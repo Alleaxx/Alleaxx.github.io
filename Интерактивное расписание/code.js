@@ -1,6 +1,6 @@
 'use strict';
 //Исходные данные
-let subjects = {
+const subjects = {
     1:[
         [0,0],
         [0,0],
@@ -45,29 +45,33 @@ let subjects = {
         [0,0]
     ],
 }
-let SRS = {
+const SRS = {
     12:[1],
     1:[2,4]
 }
-let timeTable = {
+const timeTable = {
     1:[[11,35],[13,5]],
     2:[[13,15],[14,45]],
     3:[[15,25],[16,55]],
     4:[[17,5],[18,35]],
 };
-let months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
-let weekDays = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
+const dateStart = new Date(2019,9,1,8,0,0);
+const dateEnd = new Date(2019,21,12,19,0,0);
+const months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+const weekDays = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
 //Генерируемые данные
 let table = document.body.querySelector('#main-table');
 let timeText = document.body.querySelector('#current-time');
 let timeTillNextText = document.body.querySelector('#time-till-next');
 let timeTillEndText = document.body.querySelector('#time-till-end');
+let timeTillSRSText = document.body.querySelector('#time-till-srs');
 
 
 let currDate = new Date();
 let nextPair = null;
-let minTillNextPair = -1;
+let timeTillNextPair = -1;
 let currentPair = null;
+let nextSRS = null;
 let showDaysAhead = 7;
 
 
@@ -117,12 +121,17 @@ function UpdateInteractive(){
         if(SRS[date.getMonth() + 1].indexOf(date.getDate()) !== -1){
             header.innerText += ', СРС!';
             header.classList.toggle('srs');
+            if(nextSRS === null){
+                nextSRS = date;
+                timeTillSRSText.innerHTML = `Следующая СРС в ${weekDays[date.getDay()]}, ${date.getDate()}, ${months[date.getMonth()]}`;
+            }
         }
 
         //Информация о предметах
         let day = date.getDay();
         let even = weekEven ? 0 : 1;
-        for (let a = 0; a < 4; a++) {
+        if(true || date > dateStart && date < dateEnd){
+            for (let a = 0; a < 4; a++) {
 
                 let tr = document.createElement('tr');
                 let tdDateBegin = document.createElement('td');
@@ -177,15 +186,39 @@ function UpdateInteractive(){
                     td5.colSpan = 4;
                     tr.appendChild(td5);
                 }
+            }
         }
+
 
         //Обновление даты
         date.setDate(date.getDate() + 1);
         weekEven = date.getDay() === 1 ? !weekEven : weekEven;
     }
 }
+
 function UpdateClassic(){
     table.innerHTML = '';
+    let tr = document.createElement('tr');
+    let tdM = document.createElement('th');
+    let tdD = document.createElement('th');
+    tr.append(tdM,tdD);
+    table.append(tr);
+    tdM.colSpan = 2;
+    tdM.innerText = 'Месяц';
+    tdD.colSpan = 2;
+    tdD.innerText = 'Дни СРС';
+    for(let month of Object.keys(SRS)){
+        let tr = document.createElement('tr');
+        let tdM = document.createElement('td');
+        let tdD = document.createElement('td');
+        tr.append(tdM,tdD);
+        table.append(tr);
+
+        tdM.colSpan = 2;
+        tdM.innerText = month;
+        tdD.colSpan = 2;
+        tdD.innerText = SRS[month].join('; ');
+    }
     for (let i = 0; i < 6; i++) {
         let tr = document.createElement('tr');
         let headerDay = document.createElement('th');
@@ -232,6 +265,7 @@ function UpdateClassic(){
         }
     }
 }
+
 function TimeUpdate(){
     let now = new Date();
     timeText.innerHTML = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}, текущее время: ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
