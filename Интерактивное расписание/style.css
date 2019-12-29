@@ -13,8 +13,12 @@ table{
 td{
     padding: 6px;
     background-color: rgb(168, 206, 234);
+    text-align: center;
 }
-
+p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
 th{
     font-size: 1.2em;
     background-color: rgb(91, 155, 213);
@@ -35,5 +39,8 @@ td.time{
 }
 
 #current-time{
+    font-size: 1.3em;
+}
+#time-till-next{
     font-size: 1.2em;
 }

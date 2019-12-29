@@ -55,12 +55,14 @@ let timeTable = {
     3:[[15,25],[16,55]],
     4:[[17,5],[18,35]],
 };
-let months = ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'];
+let months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
 let weekDays = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
 //Генерируемые данные
 let table = document.body.querySelector('#main-table');
 let timeText = document.body.querySelector('#current-time');
 let timeTillNextText = document.body.querySelector('#time-till-next');
+let timeTillEndText = document.body.querySelector('#time-till-end');
+
 
 let currDate = new Date();
 let nextPair = null;
@@ -69,13 +71,29 @@ let currentPair = null;
 let showDaysAhead = 7;
 
 
-Update();
+UpdateInteractive();
 TimeUpdate();
-let timer = setInterval(() => Update(),60000);
+let timer = setInterval(() => UpdateInteractive(),60000);
 let timer2 = setInterval(() => TimeUpdate(),1000);
 
+let allInputs = document.body.querySelectorAll('input');
+for (let i = 0; i < allInputs.length; i++) {
+    const element = allInputs[i];
+    if(element.type === 'radio'){
+        element.addEventListener('click',() => {
+            if(element.value === 'interactive'){
+                UpdateInteractive();
+                timer = setInterval(() => UpdateInteractive(),60000);
+            }
+            else{
+                UpdateClassic();
+                clearInterval(timer);
+            }
+        });
+    }
+}
 
-function Update(){
+function UpdateInteractive(){
     currDate = new Date();
     let date = new Date();
     let weekEven = true;
@@ -93,6 +111,7 @@ function Update(){
 
 
         headerWeek.innerText = weekEven ? 'чет': 'нечет';
+        headerWeek.colSpan = 2;
         header.innerText = `${date.getDate()} ${months[date.getMonth()]}, ${weekDays[date.getDay()]}`;
         header.colSpan = 4;
         if(SRS[date.getMonth() + 1].indexOf(date.getDate()) !== -1){
@@ -106,15 +125,17 @@ function Update(){
         for (let a = 0; a < 4; a++) {
 
                 let tr = document.createElement('tr');
-                let tdDate = document.createElement('td');
-                tr.appendChild(tdDate);
+                let tdDateBegin = document.createElement('td');
+                let tdDateEnd = document.createElement('td');
+
+                tr.append(tdDateBegin,tdDateEnd);
                 table.appendChild(tr);
 
                 //Текущий предмет
-                console.log(`[${day}][${a}][${even}]`);
-                console.log(subjects[day][a][even]);
-                tdDate.innerText = timeTable[a+1].join(' - ');
-                tdDate.classList.toggle('time');
+                tdDateBegin.innerText = timeTable[a+1][0].join(':');
+                tdDateBegin.classList.toggle('time');
+                tdDateEnd.innerText = timeTable[a+1][1].join(':');
+                tdDateEnd.classList.toggle('time');
                 if(subjects[day][a][even] !== 0){
                     let td2 = document.createElement('td');
                     let td3 = document.createElement('td');
@@ -130,13 +151,24 @@ function Update(){
                     let pairBegin = new Date(date.getFullYear(),date.getMonth(),date.getDate(),timeTable[a+1][0][0],timeTable[a+1][0][1]); 
                     let pairEnd = new Date(date.getFullYear(),date.getMonth(),date.getDate(),timeTable[a+1][1][0],timeTable[a+1][1][1]);
                     if(i === 0 && date > pairBegin && date < pairEnd){
-                        td2.classList.toggle('now');
+                        let allTd = tr.querySelectorAll('td');
+                        for (let i = 0; i < allTd.length; i++) {
+                            const element = allTd[i];
+                            element.classList.toggle('now');
+                        }
                         currentPair = subjects[day][a][even];
+                        let timetill = Math.round((pairBegin-currDate)/60000);
+                        timeTillEndText = `До конца текущей пары ${timetill} минут`;
                     }
                     if(nextPair === null && currDate < pairBegin){
-                        td2.classList.toggle('next');
+                        let allTd = tr.querySelectorAll('td');
+                        for (let i = 0; i < allTd.length; i++) {
+                            const element = allTd[i];
+                            element.classList.toggle('next');
+                        }
                         nextPair = subjects[day][a][even];
-                        timeTillNextText.innerHTML = `До начала \"${subjects[day][a][even].name}\" осталось ${(pairBegin-currDate)/60000} минут`;
+                        let timetill = Math.round((pairBegin-currDate)/60000);
+                        timeTillNextText.innerHTML = `Следующая пара \"${subjects[day][a][even].name}\" в <b>${subjects[day][a][even].cab}</b> через ${timetill} минут`;
                     }
                 }
                 //Пар в этот день нет
@@ -149,14 +181,58 @@ function Update(){
 
         //Обновление даты
         date.setDate(date.getDate() + 1);
-        if(date.getDay() === 1){
-            weekEven = !weekEven;
+        weekEven = date.getDay() === 1 ? !weekEven : weekEven;
+    }
+}
+function UpdateClassic(){
+    table.innerHTML = '';
+    for (let i = 0; i < 6; i++) {
+        let tr = document.createElement('tr');
+        let headerDay = document.createElement('th');
+        let headerW1 = document.createElement('th');
+        let headerW2 = document.createElement('th');
+
+        tr.append(headerDay,headerW1,headerW2);
+        table.appendChild(tr);
+        headerDay.innerText = weekDays[i+1];
+        headerDay.colSpan = 2;
+        headerW1.innerText = 'Нечетная';
+        headerW2.innerText = 'Четная';
+
+        let day = i+1;
+        for (let a = 0; a < 4; a++) {
+
+                let tr = document.createElement('tr');
+                let tdDateBegin = document.createElement('td');
+                let tdDateEnd = document.createElement('td');
+
+                tr.append(tdDateBegin,tdDateEnd);
+                table.appendChild(tr);
+
+                //Текущий предмет
+                tdDateBegin.innerText = timeTable[a+1][0].join(':');
+                tdDateBegin.classList.toggle('time');
+                tdDateEnd.innerText = timeTable[a+1][1].join(':');
+                tdDateEnd.classList.toggle('time');
+
+                if(subjects[day][a][0].name !== subjects[day][a][1].name){
+                    let td2 = document.createElement('td');
+                    let td3 = document.createElement('td');
+                    tr.append(td2,td3);
+                    td2.innerText = subjects[day][a][0] === 0 ? '' : `${subjects[day][a][0].name} ${subjects[day][a][0].cab} (${subjects[day][a][0].type})`;
+                    td3.innerText = subjects[day][a][1] === 0 ? '' : `${subjects[day][a][1].name} ${subjects[day][a][1].cab} (${subjects[day][a][1].type})`;
+                }
+                else{
+                    let td2 = document.createElement('td');
+                    tr.append(td2);
+                    td2.innerText = subjects[day][a][0] === 0 ? '' : `${subjects[day][a][0].name} ${subjects[day][a][0].cab} (${subjects[day][a][0].type})`;
+                    td2.colSpan = 2;
+                }
+                
         }
     }
-    console.log('Все предметы');
-    console.log(subjects)
 }
 function TimeUpdate(){
-    let currDate = new Date();
-    timeText.innerHTML = `Текущее время: ${currDate.getHours()}:${currDate.getMinutes()}:${currDate.getSeconds()}`;
+    let now = new Date();
+    timeText.innerHTML = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}, текущее время: ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 }
