@@ -117,7 +117,7 @@ function UpdateInteractive(){
             thSRS.classList.toggle('srs');
             if(nextSRS === null){
                 nextSRS = date;
-                SetText(timeTillSRSText,`Следующая СРС в ${weekDays[date.getDay()]}, ${date.getDate()}, ${months[date.getMonth()]}`);
+                SetText(timeTillSRSText,`Следующая СРС в ${weekDays[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]}`);
             }
         }
 
@@ -160,7 +160,7 @@ function UpdateInteractive(){
                     }
                     nextPair = subjects[day][a][even];
                     let timetill = Math.round((pairBegin-currDate)/60000);
-                    SetText(timeTillNextPairText,`Следующая пара \"${subjects[day][a][even].name}\" в <b>${subjects[day][a][even].cab}</b> через ${timetill} минут`);
+                    SetText(timeTillNextPairText,`\"${subjects[day][a][even].name}\" в <b>${subjects[day][a][even].cab}</b> через ${timetill} минут`);
                 }
             }
             //Пар в это время нет
