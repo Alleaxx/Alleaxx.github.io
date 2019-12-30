@@ -2,33 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
     <title>Интерактивное Расписание</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
     <!-- https://alleaxx.github.io/Интерактивное расписание/base.html -->
     <!-- Добавить границы конца и начала семестра
-    Время до конца текущей пары
-    Добавить указание семестра
-    Классическое расписание
     Расписание сессии
-    Улучшить заголовок -->
+    Адаптивный дизайн
+    Увеличенный кнопки интерактивного и классического вида
+    -->
     <div class="main">
         <h1>Расписание на 5-й семестр, ПИ3-2</h1>
         <p id="current-time">Текущее время</p>
         <p id="time-till-srs"></p>
         <p id="time-till-end"></p>
         <p id="time-till-next">До начала пары n минут</p>
-        <radio>
-            <p>
-                <input type="radio" value="interactive" checked name="mode">
-                Интерактивный вид
-            </p>
-            <p>
-                <input type="radio" value='classic' name="mode">
-                Классический вид
-            </p>
-        </radio>
+        <div class="options">
+            <a id="a-interactive" class="active" href="#">Интерактивный вид</a>
+            <a id="a-classic" href="#">Классический вид</a>    
+        </div >
 
         <table id="main-table">
 

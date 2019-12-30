@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 table{
     border: 1px solid gray;
@@ -28,6 +29,32 @@ th{
 td.time{
     background-color: rgb(221, 235, 247);
 }
+.options{
+    margin: 8px;
+}
+.options a{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid gainsboro;
+    margin: 5px;
+    text-decoration: none;
+}
+.options a:visited{
+    color: rgb(11, 67, 119);
+}
+.options a:hover{
+    cursor: pointer;
+    background-color: rgb(255, 200, 200);
+}
+.options .active{
+    background-color: rgb(168, 206, 234);
+    color: rgb(255, 200, 200);
+
+}
+
+
+
 .now{
     background-color: orange;
 }
