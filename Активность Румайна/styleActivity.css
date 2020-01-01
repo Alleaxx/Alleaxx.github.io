@@ -61,23 +61,23 @@ body{
         color: rgb(64, 64, 64);
     }
     .activity-table .act-1{
-        background-color: rgb(255, 199, 206);
+        background-color: #ffc7ce;
         color: brown;
     }
     .activity-table .act-2{
         background-color: rgb(255, 235, 156);
-        color: rgb(173, 113, 54);
+        color: rgb(255, 166, 77);
     }
     .activity-table .act-3{
-        background-color: rgb(198, 239, 206);
+        background-color: #c6efce;
         color: green;
     }
     .activity-table .act-4{
-        background-color: rgb(199, 231, 253);
+        background-color: #c7e7fd;
         color: blue;
     }
     .activity-table .act-5{
-        background-color: rgb(222, 206, 254);
+        background-color: #decefe;
         color: purple;
     }
 
@@ -100,9 +100,13 @@ body{
 
     .id-activity-table td,th{
         text-align: center;
+        border: 1px solid gainsboro;
 
         background-color: rgb(250,250,250);
     }
     .id-activity-table th{
         background-color: rgb(240, 240, 240);
+    }
+    .id-activity-table .option{
+        background-color: rgb(250,250,250);
     }
