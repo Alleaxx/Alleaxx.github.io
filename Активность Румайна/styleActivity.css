@@ -107,6 +107,17 @@ body{
     .id-activity-table th{
         background-color: rgb(240, 240, 240);
     }
+    .id-activity-table .year{
+        cursor: pointer;
+        background-color: rgb(240, 240, 240);
+    }
+    .id-activity-table .year:hover{
+        background-color: rgb(220, 220, 220);
+    }
+    .id-activity-table .active{
+        background-color: rgb(220, 220, 220);
+    }
+
     .id-activity-table .option{
         background-color: rgb(250,250,250);
     }

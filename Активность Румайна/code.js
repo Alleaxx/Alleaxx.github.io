@@ -81,10 +81,10 @@ function RecountStatisticsID(){
             let messages = Statistics[i].stat[a];
             let td = row.cells[a];
             if(messages !== undefined){
-                messages = checkPerDay.checked ? (messages/30) : messages;
+                messages = checkPerDay.checked ? (messages/43200) : messages;
                 messages = checkPages.checked ? (messages/20) : messages;
 
-                td.innerHTML = Math.round(messages);
+                td.innerHTML = Math.ceil(messages * 1000) / 1000;
                 avg++;
                 sum += messages;    
             }
@@ -101,8 +101,47 @@ function FillStatisticsID(){
         let row = AddTableRow(tableID);
         let sum = 0;
         let avg = 0;
-        AddTableCell(row,Statistics[i].year,1,'th');
+        let thYear = AddTableCell(row,Statistics[i].year,1,'th');
+        thYear.classList.toggle('year');
 
+        thYear.onclick = function(){
+            let old = tableID.querySelector('.active');
+            console.log(old);
+            if(old){
+                old.classList.toggle('active');
+            }
+
+            let data = Object.values(Statistics[i].stat);
+            thYear.classList.toggle('active');
+            
+            let ctx = document.getElementById('myChart').getContext('2d');
+            let myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                datasets: [{
+                    label: `Количество постов в ${Statistics[i].year}`,
+                    data: data,
+                    backgroundColor: [
+                        'rgba(255, 224, 166, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgb(236, 154, 2)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        };
         for (let a = 1; a < 13; a++) {
             let messages = Statistics[i].stat[a];
             let td = AddTableCell(row,'');
@@ -126,7 +165,6 @@ function FillStatisticsID(){
 
     }
 }
-
 
 
 function AddTableRow(table,tds,type){
