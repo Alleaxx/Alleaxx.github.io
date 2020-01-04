@@ -147,7 +147,7 @@ function UpdateInteractive(){
                         element.classList.toggle('now');
                     }
                     currentPair = subjects[day][a][even];
-                    let timetill = Math.round((pairBegin-date)/60000);
+                    let timetill = Math.round((pairEnd-date)/60000);
                     SetText(timeTillEndText,`До конца текущей пары ${timetill} минут`);
 
                 }
