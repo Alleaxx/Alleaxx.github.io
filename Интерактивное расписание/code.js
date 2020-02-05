@@ -3,40 +3,85 @@
 const subjects = {
     1:[
         [0,0],
-        [0,0],
-        [0,0],
+        [
+            {name:'Базы данных',cab:'ЛК-232',type:'Л',prep:'Болдырева'},
+            {name:'Базы данных',cab:'ЛК-232',type:'Л',prep:'Болдырева'}
+        ],
+        [
+            {name:'Базы данных',cab:'ЛК-415',type:'ПЗ',prep:'Болдырева'},
+            {name:'Базы данных',cab:'ЛК-415',type:'ПЗ',prep:'Болдырева'}
+        ],
         [0,0]
     ],
     2:[
-        [{name:'Базы данных',cab:'ПА-12',type:'Л',prep:'Болдырева'},{name:'Базы данных',cab:'ПА-12',type:'Л',prep:'Болдырева'}],
-        [{name:'Методы и модели анализа данных',cab:'ПА-18',type:'Л',prep:'Крамаренко'},{name:'Методы и модели анализа данных',cab:'ПА-18',type:'Л',prep:'Крамаренко'}],
-        [{name:'Базы данных',cab:'ЛК-110',type:'ЛЗ',prep:'Болдырева'},{name:'Базы данных',cab:'ЛК-110',type:'ЛЗ',prep:'Болдырева'}],
-        [{name:'Методы и модели анализа данных',cab:'ЛК-114',type:'ЛЗ',prep:'Крамаренко'},{name:'Методы и модели анализа данных',cab:'ЛК-114',type:'ЛЗ',prep:'Крамаренко'}],
+        [0,0],
+        [
+            {name:'Предметно-ориентированные эк. инф. системы',cab:'ЛК-226',type:'Л',prep:'Показаньев'},
+            {name:'Интеллектуализация инф. систем',cab:'ЛК-232',type:'Л',prep:'-'}
+        ],
+        [
+            {name:'Предметно-ориентированные эк. инф. системы',cab:'ЛК-108',type:'ПЗ',prep:'Показаньев'},
+            {name:'Предметно-ориентированные эк. инф. системы',cab:'ЛК-108',type:'ПЗ',prep:'Показаньев'},
+        ],
+        [
+            {name:'Интеллектуализация инф. систем',cab:'ЛК-108',type:'ПЗ',prep:'-'},
+            {name:'Интеллектуализация инф. систем',cab:'ЛК-108',type:'ПЗ',prep:'-'}
+        ],
 
     ],
     3:[
+        [
+            {name:'Корпоративные инф. системы',cab:'БЦ-108',type:'ЛЗ',prep:'Терехова'},
+            {name:'Корпоративные инф. системы',cab:'БЦ-108',type:'ЛЗ',prep:'Терехова'}
+        ],
+        [
+            {name:'Физкультура',cab:'Сп-К',type:'',prep:''},
+            {name:'Физкультура',cab:'Сп-К',type:'',prep:''}
+        ],
         [0,0],
-        [{name:'Инф. безопасность',cab:'У-409',type:'Л',prep:'Бадьина'},{name:'Управление проектами',cab:'У-409',type:'Л',prep:'???'}],
-        [{name:'Управление проектами',cab:'У-411',type:'ПЗ',prep:'Никитин'},{name:'Управление проектами',cab:'У-411',type:'ПЗ',prep:'Никитин'}],
         [0,0]
     ],
     4:[
-        [{name:'Инф. безопасность',cab:'У-417',type:'ЛЗ',prep:'Бадьина'},{name:'Инф. безопасность',cab:'У-417',type:'ЛЗ',prep:'Бадьина'}],
-        [{name:'Физкультура',cab:'Сп-К',type:'',prep:''},{name:'Физкультура',cab:'Сп-К',type:'',prep:''}],
-        [{name:'РПУР',cab:'ПА-12',type:'Л',prep:'Тимофеева'},{name:'Проектирование систем',cab:'ПА-12',type:'Л',prep:'Шевченко'}],
-        [{name:'РПУР',cab:'ЛК-223',type:'ПЗ',prep:'Эльза'},{name:'РПУР',cab:'ЛК-223',type:'ПЗ',prep:'Эльза'}]
+        [
+            0,
+            {name:'Корпоративные инф. системы',cab:'БЦ-18',type:'ЛЗ',prep:'Терехова'}
+        ],
+        [
+            {name:'Корпоративные инф. системы',cab:'БЦ-18',type:'Л',prep:'Терехова'},
+            {name:'Корпоративные инф. системы',cab:'БЦ-18',type:'Л',prep:'Терехова'}
+        ],
+        [
+            {name:'Корпоративные инф. системы',cab:'БЦ-18',type:'ЛЗ',prep:'Терехова'},
+            {name:'Корпоративные инф. системы',cab:'БЦ-18',type:'ЛЗ',prep:'Терехова'}
+        ],
+        [
+            {name:'Распр. системы и облачные вычисления',cab:'ЛК-117',type:'ЛЗ',prep:'-'},
+            {name:'Распр. системы и облачные вычисления',cab:'ЛК-117',type:'ЛЗ',prep:'-'}
+        ]
     ],
     5:[
-        [{name:'Экономика информатизации',cab:'ПА-22',type:'Л',prep:'Данилина'},{name:'Экономика информатизации',cab:'ПА-22',type:'Л',prep:'Данилина'}],
-        [{name:'Проектирование систем',cab:'ЛК-110',type:'ЛЗ',prep:'Шевченко'},{name:'Проектирование систем',cab:'ЛК-110',type:'ЛЗ',prep:'Шевченко'}],
-        [{name:'Проектирование систем',cab:'ЛК-110',type:'ЛЗ',prep:'Шевченко'},{name:'Экономика информатизации',cab:'ЛК-232',type:'ПЗ',prep:'Данилина'}],
-        [{name:'Экономика информатизации',cab:'ЛК-232',type:'ПЗ',prep:'Данилина'},0]
+        [
+            {name:'Распр. системы и облачные вычисления',cab:'ЛК-117',type:'ЛЗ',prep:'-'},
+            {name:'Распр. системы и облачные вычисления',cab:'ЛК-117',type:'ЛЗ',prep:'-'}
+        ],
+        [
+            {name:'Физкультура',cab:'Сп-К',type:'',prep:''},
+            {name:'Распр. системы и облачные вычисления',cab:'ЛК-311',type:'Л',prep:'-'}
+        ],
+        [
+            {name:'Компьютерная графика и программирование игр',cab:'ЛК-117',type:'ЛЗ',prep:'Якунина'},
+            {name:'Компьютерная графика и программирование игр',cab:'ЛК-117',type:'ЛЗ',prep:'Якунина'}
+        ],
+        [
+            {name:'Компьютерная графика и программирование игр',cab:'ЛК-232',type:'Л',prep:'Якунина'},
+            {name:'Компьютерная графика и программирование игр',cab:'ЛК-232',type:'Л',prep:'Якунина'}
+        ]
     ],
     6:[
         [0,0],
-        [0,{name:'Физкультура',cab:'Сп-К',type:'',prep:''}],
-        [{name:'Проектирование систем',cab:'ЛК-311',type:'Л',prep:'Шевченко'},{name:'Проектирование систем',cab:'ЛК-311',type:'Л',prep:'Шевченко'}],
-        [{name:'Проектирование систем',cab:'ЛК-110',type:'ЛЗ',prep:'Шевченко'},{name:'Проектирование систем',cab:'ЛК-110',type:'ЛЗ',prep:'Шевченко'}]
+        [0,0],
+        [0,0],
+        [0,0]
     ],
     0:[
         [0,0],
@@ -46,8 +91,9 @@ const subjects = {
     ],
 }
 const SRS = {
-    12:[1],
-    1:[2,4]
+    2:[12,18,22,24,28],
+    3:[5,10,14,18,26,30],
+    4:[3],
 }
 const timeTable = {
     1:[[11,35],[13,5]],
@@ -55,17 +101,25 @@ const timeTable = {
     3:[[15,25],[16,55]],
     4:[[17,5],[18,35]],
 };
-const dateStart = new Date(2019,9,1,8,0,0);
-const dateEnd = new Date(2019,21,12,19,0,0);
 const months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
 const weekDays = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
 //Генерируемые данные
-let table = document.body.querySelector('#main-table');
-let timeNowText = document.body.querySelector('#current-time');
-let timeTillNextPairText = document.body.querySelector('#time-till-next');
-let timeTillEndText = document.body.querySelector('#time-till-end');
-let timeTillSRSText = document.body.querySelector('#time-till-srs');
+let table = document.querySelector('#main-table');
+let timeNowText = document.querySelector('#current-time');
+let timeTillNextPairText = document.querySelector('#time-till-next');
+let timeTillSRSText = document.querySelector('#time-till-srs');
 
+
+timeTillNextPairText.addEventListener('mouseover',() => {
+    document.querySelectorAll('.next').forEach(elem => {
+        elem.classList.toggle('selected');
+    });
+});
+timeTillNextPairText.addEventListener('mouseout',() => {
+    document.querySelectorAll('.selected').forEach(elem => {
+        elem.classList.toggle('selected');
+    });
+});
 
 let currDate = new Date();
 let showDaysAhead = 7;
@@ -118,6 +172,10 @@ function UpdateInteractive(){
             if(nextSRS === null){
                 nextSRS = date;
                 SetText(timeTillSRSText,`Следующая СРС в ${weekDays[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]}`);
+                if(date.getDate() === new Date().getDate()){
+                    SetText(timeTillSRSText,`CРС сегодня!`);
+                }
+
             }
         }
 
@@ -141,23 +199,14 @@ function UpdateInteractive(){
                 let pairEnd = new Date(date.getFullYear(),date.getMonth(),date.getDate(),timeTable[a+1][1][0],timeTable[a+1][1][1]);
                 //Текущая пара
                 if(i === 0 && date > pairBegin && date < pairEnd){
-                    let allTd = tr.querySelectorAll('td');
-                    for (let i = 0; i < allTd.length; i++) {
-                        const element = allTd[i];
-                        element.classList.toggle('now');
-                    }
+                    tr.classList.toggle('now');
                     currentPair = subjects[day][a][even];
                     let timetill = Math.round((pairEnd-date)/60000);
-                    SetText(timeTillEndText,`До конца текущей пары ${timetill} минут`);
-
+                    SetText(timeTillNextPairText,`\"${subjects[day][a][even].name}\" кончится через ${timetill} минут`);
                 }
                 //Следующая пара
-                if(nextPair === null && currDate < pairBegin){
-                    let allTd = tr.querySelectorAll('td');
-                    for (let i = 0; i < allTd.length; i++) {
-                        const element = allTd[i];
-                        element.classList.toggle('next');
-                    }
+                if(currentPair === null && nextPair === null && currDate < pairBegin){
+                    tr.classList.toggle('next');
                     nextPair = subjects[day][a][even];
                     let timetill = Math.round((pairBegin-currDate)/60000);
                     SetText(timeTillNextPairText,`\"${subjects[day][a][even].name}\" в <b>${subjects[day][a][even].cab}</b> через ${timetill} минут`);
@@ -168,8 +217,6 @@ function UpdateInteractive(){
                 TableAddTd(tr,'-',4);
             }
         }
-        
-
 
         //Обновление даты
         date.setDate(date.getDate() + 1);

@@ -55,12 +55,17 @@ td.time{
 
 
 
-.now{
-    background-color: orange;
-}
-.next{
+.now td{
     background-color: rgb(255, 101, 101);
 }
+.next td{
+    background-color: rgb(255, 101, 101);
+}
+.selected td{
+    background-color: orange;
+}
+
+
 .srs{
     background-color: greenyellow;
 }
@@ -70,4 +75,5 @@ td.time{
 }
 #time-till-next{
     font-size: 1.2em;
+    cursor: pointer;
 }
