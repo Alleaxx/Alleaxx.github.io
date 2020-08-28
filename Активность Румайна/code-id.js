@@ -18,34 +18,23 @@ let colors = [
     {min: 40001,max: 1000000, color:'#decefe'},
 ]
 let selectedYears = [];
-let checkColor = document.getElementById('check-color');
 let checkPages = document.getElementById('check-pages');
 let checkPerDay = document.getElementById('check-perDay');
 
-let tableOld = document.getElementsByClassName('activity-table')[0];
 let tableID = document.getElementsByClassName('id-activity-table')[0];
 let ctx = document.getElementById('chart-stat').getContext('2d');
 
-checkColor.onchange = function(){
-    for(let r = 1;r < tableOld.rows.length-1;r++){
-        for(let c = 1; c < tableOld.rows[r].cells.length;c++){
-            tableOld.rows[r].cells[c].classList.toggle('no-background');
-        }
+checkPages.onchange = () => {
+    RecountStatisticsID();
+
+    if(checkPages.checked){
+        tableID.rows[0].cells[0].innerHTML = tableID.rows[0].cells[0].innerHTML.replace('постов','страниц');
+    }
+    else{
+        tableID.rows[0].cells[0].innerHTML = tableID.rows[0].cells[0].innerHTML.replace('страниц','постов');
     }
 }
-checkPages.onchange = function(){
-    function TogglePages(){
-        RecountStatisticsID();
-    
-        if(checkPages.checked){
-            tableID.rows[0].cells[0].innerHTML = tableID.rows[0].cells[0].innerHTML.replace('постов','страниц');
-        }
-        else{
-            tableID.rows[0].cells[0].innerHTML = tableID.rows[0].cells[0].innerHTML.replace('страниц','постов');
-        }
-    }
-}
-checkPerDay.onchange = function(){
+checkPerDay.onchange = () => {
     RecountStatisticsID();
 
     if(checkPerDay.checked){
@@ -75,10 +64,10 @@ function RecountStatisticsID(){
             let messages = Statistics[years[i]][a];
             let td = row.cells[a];
             if(messages !== undefined){
-                messages = checkPerDay.checked ? (messages/43200) : messages;
+                messages = checkPerDay.checked ? (messages/30) : messages;
                 messages = checkPages.checked ? (messages/20) : messages;
 
-                td.innerHTML = Math.ceil(messages * 1000) / 1000;
+                td.innerHTML = Math.ceil(messages * 10) / 10;
                 avg++;
                 sum += messages;    
             }
@@ -137,13 +126,11 @@ function FillStatisticsID(){
             let td = AddTableCell(row,'');
             if(messages !== undefined){
                 td.innerHTML = messages;
-                if(checkColor.checked){
-                    colors.forEach(condition => {
-                        if(messages >= condition.min && messages <= condition.max){
-                            td.style.backgroundColor = condition.color;
-                        }
-                    });
-                }
+                colors.forEach(condition => {
+                    if(messages >= condition.min && messages <= condition.max){
+                        td.style.backgroundColor = condition.color;
+                    }
+                });
                 avg++;
                 sum += messages;    
             }
