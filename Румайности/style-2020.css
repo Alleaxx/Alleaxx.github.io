@@ -1,0 +1,162 @@
+
+body{
+    background-color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    min-width: 600px;
+}
+
+::selection{
+    background-color: orange;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    border: 1px solid gray;
+    border-radius: 6px;
+
+    background-color: rgb(236, 236, 236);
+}
+nav{
+    background-color: whitesmoke;
+    border-bottom: 1px solid gray;
+}
+nav ul{
+    margin: 3px;
+    list-style: none;
+}
+nav li{
+    margin: 10px 0;
+}
+nav li a{
+    padding: 10px;
+}
+nav li a:hover{
+    background-color: white;
+}
+nav h4{
+    margin: 10px 0 5px 15px;
+}
+.mini-logo{
+    width: 35px;
+}
+
+
+main{
+    background-color: whitesmoke;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+footer{
+    padding: 10px;
+    text-align: center;
+}
+blockquote{
+    border-left: 4px solid orange;
+    padding-left: 8px;
+}
+
+header{
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+header h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+header img{
+    margin-right: 15px;
+    height: 75px;
+}
+header p{
+    margin:0;
+}
+
+.header-news{
+    display: flex;
+    align-content: center;
+}
+.header-news h2{
+    margin: 0;
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.line{
+    border-bottom: 1px solid gray;
+}
+.right{
+    float: right;
+}
+
+.news{
+    margin: 15px 0px;
+}
+
+
+/* .news > p:first-child{
+    color:red;
+}
+a + p::before{
+    content: 'Пояснение: ';
+} */
+
+
+.news img{
+    margin: 5px;
+}
+.news p{
+    line-height: 140%;
+}
+.news h2{
+    margin-bottom: 5px;
+}
+.news a{
+    text-decoration: none;
+    color: rgb(218, 141, 0);
+}
+.news a:hover{
+    text-decoration: underline;
+    color:orange;
+}
+.news ul{
+    margin-top: 5px;
+}
+.news ul li{
+    padding: 5px 0;
+}
+.news ul li p{
+    margin: 5px;
+}
+
+.rage{
+    vertical-align: middle;
+}
+
+.night{
+    list-style-image: url(2020/images/night-komiks.png);
+}
+.wheatley{
+    list-style-image: url(2020/images/wheatley-komiks.png);
+}
+.zorreta{
+    list-style-image: url(2020/images/zorreta-komiks.jpg);
+}
+
+.hidden{
+    display: none;
+}
