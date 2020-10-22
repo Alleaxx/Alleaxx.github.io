@@ -3,14 +3,14 @@ body{
     background-color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    min-width: 600px;
+
+    margin: auto;
+    min-width: 608px;
+    max-width: 900px;
 }
 
 ::selection{
-    background-color: orange;
+    background-color: rgb(255, 218, 149);
 }
 
 #content{
@@ -22,28 +22,37 @@ body{
 
     background-color: rgb(236, 236, 236);
 }
+
 nav{
     background-color: whitesmoke;
     border-bottom: 1px solid gray;
 }
 nav ul{
-    margin: 3px;
-    list-style: none;
-}
-nav li{
-    margin: 10px 0;
-}
-nav li a{
-    padding: 10px;
-}
-nav li a:hover{
-    background-color: white;
+    margin: 10px 30px;
 }
 nav h4{
     margin: 10px 0 5px 15px;
 }
-.mini-logo{
-    width: 35px;
+nav a{
+    padding: 8px 12px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: white;
+}
+li[data-logotype] ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li[data-logotype] li{
+    padding: 8px 0;
+}
+li[data-logotype = "old"]{
+    list-style-image: url(images/СтарыйГерб-20.png);
+}
+li[data-logotype = "new"]{
+    list-style-image: url(images/Герб-20.png);
 }
 
 
@@ -102,9 +111,17 @@ header p{
 .right{
     float: right;
 }
+.left{
+    float: left;
+}
 
 .news{
     margin: 15px 0px;
+    clear: both;
+}
+
+.clear{
+    clear: both;
 }
 
 
@@ -121,10 +138,12 @@ a + p::before{
 }
 .news p{
     line-height: 140%;
+    /* text-indent: 25px; */
 }
 .news h2{
     margin-bottom: 5px;
 }
+
 .news a{
     text-decoration: none;
     color: rgb(218, 141, 0);
@@ -142,6 +161,17 @@ a + p::before{
 .news ul li p{
     margin: 5px;
 }
+.news figure{
+    margin: 7px;
+}
+.news figure img{
+    margin: 0;
+}
+.news figure p, .news figcaption{
+    margin: 0;
+    font-style: italic;
+    color: rgb(72, 72, 72)
+}
 
 .rage{
     vertical-align: middle;
@@ -157,6 +187,88 @@ a + p::before{
     list-style-image: url(2020/images/zorreta-komiks.jpg);
 }
 
+
+.sideinfo{
+    background-color: whitesmoke;
+    max-width: 100%;
+    margin: 10px;
+    margin-bottom: 25px;
+    border: 1px solid gray;
+}
+.sideinfo.small{
+    max-width: 40%;
+}
+.sideinfo .header{
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 5px 10px;
+    border-bottom: 1px gray solid;
+}
+.sideinfo .header h3, .sideinfo .header p{
+    margin: 4px 0;
+}
+.sideinfo .header p{
+    font-style: italic;
+}
+.sideinfo ul{
+    margin: 10px 0;
+}
+.sideinfo p{
+    margin: 5px 10px;
+    text-align: center;
+}
+.sideinfo li p, .sideinfo .header p{
+    text-align: left;
+}
+
+
+.newspaper-versions{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray
+}
+.newspaper-versions th{
+    padding: 15px;
+}
+.newspaper-versions td{
+    padding: 10px 5px;
+    border: 1px solid gray;
+    border-right: 0;
+    border-left:  0;
+    text-align: center;
+}
+.newspaper-versions tr[data-state] :hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.newspaper-versions tr[data-state='closed']{
+    font-weight: normal;
+}
+.newspaper-versions tr[data-state='closed'] ~ tr:not([data-state]){
+    display: none;
+}
+.newspaper-versions tr[data-state='opened']{
+    font-weight: bold;
+}
+.newspaper-versions tr[data-state='opened'] ~ tr:not([data-state]){
+    display: table-row;
+}
+
+
+.newspaper-versions img{
+    height: 100px;
+}
+.newspaper-versions caption{
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+
+
+.inline{
+    display: inline-block;
+}
 .hidden{
     display: none;
 }
