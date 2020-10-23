@@ -47,12 +47,18 @@ li[data-logotype] ul{
 }
 li[data-logotype] li{
     padding: 8px 0;
+    list-style: none;
+}
+li[data-logotype]{
+    list-style: none;
+    padding-left: 35px;
 }
 li[data-logotype = "old"]{
-    list-style-image: url(images/СтарыйГерб-20.png);
+    background: url(images/СтарыйГерб-20.png) no-repeat center left;
+    background-position: 4px center;
 }
 li[data-logotype = "new"]{
-    list-style-image: url(images/Герб-20.png);
+    background: url(images/Герб-20.png) no-repeat center left;
 }
 
 
@@ -73,6 +79,7 @@ blockquote{
 header{
     padding: 15px;
     border-bottom: 1px solid gray;
+    position: sticky;
 }
 header h1{
     font-size: 48px;
@@ -178,13 +185,13 @@ a + p::before{
 }
 
 .night{
-    list-style-image: url(2020/images/night-komiks.png);
+    list-style-image: url(images/2020/night-komiks.png);
 }
 .wheatley{
-    list-style-image: url(2020/images/wheatley-komiks.png);
+    list-style-image: url(images/2020/wheatley-komiks.png);
 }
 .zorreta{
-    list-style-image: url(2020/images/zorreta-komiks.jpg);
+    list-style-image: url(images/2020/zorreta-komiks.jpg);
 }
 
 
@@ -245,14 +252,8 @@ a + p::before{
 .newspaper-versions tr[data-state='closed']{
     font-weight: normal;
 }
-.newspaper-versions tr[data-state='closed'] ~ tr:not([data-state]){
-    display: none;
-}
 .newspaper-versions tr[data-state='opened']{
     font-weight: bold;
-}
-.newspaper-versions tr[data-state='opened'] ~ tr:not([data-state]){
-    display: table-row;
 }
 
 
