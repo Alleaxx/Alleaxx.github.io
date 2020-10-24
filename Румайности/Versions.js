@@ -21,7 +21,16 @@ versions.forEach(v => {
         uls[v.type].classList.toggle('row');
     }
     let li = document.createElement('li');
-    li.innerHTML = `<a href="${v.href}">${v.name}</a>`;
+
+    let current = document.head.querySelector('meta[data-date]');
+    let add = '';
+    if(current && current.getAttribute('data-date') === v.name){
+        add = 'current-link';
+        console.log('Ага, попался!');
+        console.log(v);
+    }
+
+    li.innerHTML = `<a class="${add}" href="${v.href}">${v.name}</a>`;
     uls[v.type].append(li);
 });
 

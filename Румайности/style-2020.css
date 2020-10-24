@@ -33,22 +33,7 @@ nav ul{
 nav h4{
     margin: 10px 0 5px 15px;
 }
-nav a{
-    padding: 8px 12px;
-    text-decoration: none;
-}
-nav a:hover{
-    background-color: white;
-}
-li[data-logotype] ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-li[data-logotype] li{
-    padding: 8px 0;
-    list-style: none;
-}
+
 li[data-logotype]{
     list-style: none;
     padding-left: 35px;
@@ -59,6 +44,31 @@ li[data-logotype = "old"]{
 }
 li[data-logotype = "new"]{
     background: url(images/Герб-20.png) no-repeat center left;
+}
+li[data-logotype] ul{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    border-bottom: 1px lightgray solid;
+}
+nav a{
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: white;
+}
+nav a.current-link{
+    color: black;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px;
+}
+nav a.current:hover{
+    cursor: default;
+    background-color: inherit;
 }
 
 
@@ -110,6 +120,7 @@ header p{
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .line{
