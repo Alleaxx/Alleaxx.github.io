@@ -1,0 +1,269 @@
+
+body{
+    background-color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+    margin: auto;
+    min-width: 608px;
+    max-width: 900px;
+}
+
+::selection{
+    background-color: rgb(149, 221, 255);
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    border: 1px solid gray;
+    border-radius: 6px;
+
+    background-color: rgb(236, 236, 236);
+}
+
+nav{
+    background-color: whitesmoke;
+    border-bottom: 1px solid gray;
+}
+nav ul{
+    margin: 10px 30px;
+}
+nav h4{
+    margin: 10px 0 5px 15px;
+}
+
+li[data-logotype]{
+    list-style: none;
+    padding-left: 35px;
+}
+li[data-logotype] ul{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    border-bottom: 1px lightgray solid;
+}
+nav a{
+    display: block;
+    padding: 8px 12px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: white;
+}
+nav a.current-link{
+    color: black;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 5px;
+}
+nav a.current:hover{
+    cursor: default;
+    background-color: inherit;
+}
+
+
+main{
+    background-color: whitesmoke;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+}
+footer{
+    padding: 10px;
+    text-align: center;
+}
+blockquote{
+    border-left: 4px solid rgb(0, 110, 255);
+    padding-left: 8px;
+}
+
+header{
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    position: sticky;
+}
+header h1{
+    font-size: 48px;
+    margin: 0;
+}
+
+header img{
+    margin-right: 15px;
+    height: 75px;
+}
+header p{
+    margin:0;
+}
+
+.header-news{
+    display: flex;
+    align-content: center;
+}
+.header-news h2{
+    margin: 0;
+}
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.line{
+    border-bottom: 1px solid gray;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+
+.news{
+    margin: 15px 0px;
+    clear: both;
+}
+
+.clear{
+    clear: both;
+}
+
+
+/* .news > p:first-child{
+    color:red;
+}
+a + p::before{
+    content: 'Пояснение: ';
+} */
+
+
+.news img{
+    margin: 5px;
+}
+.news p{
+    line-height: 140%;
+    /* text-indent: 25px; */
+}
+.news h2{
+    margin-bottom: 5px;
+}
+
+.news a{
+    text-decoration: none;
+    color: rgb(0, 138, 218);
+}
+.news a:hover{
+    text-decoration: underline;
+    color:rgb(0, 60, 255);
+}
+.news ul{
+    margin-top: 5px;
+}
+.news ul li{
+    padding: 5px 0;
+}
+.news ul li p{
+    margin: 5px;
+}
+.news figure{
+    margin: 7px;
+}
+.news figure img{
+    margin: 0;
+}
+.news figure p, .news figcaption{
+    margin: 0;
+    font-style: italic;
+    color: rgb(72, 72, 72)
+}
+
+.rage{
+    vertical-align: middle;
+}
+
+
+.sideinfo{
+    background-color: whitesmoke;
+    max-width: 100%;
+    margin: 10px;
+    margin-bottom: 25px;
+    border: 1px solid gray;
+}
+.sideinfo.small{
+    max-width: 40%;
+}
+.sideinfo .header{
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+    padding: 5px 10px;
+    border-bottom: 1px gray solid;
+}
+.sideinfo .header h3, .sideinfo .header p{
+    margin: 4px 0;
+}
+.sideinfo .header p{
+    font-style: italic;
+}
+.sideinfo ul{
+    margin: 10px 0;
+}
+.sideinfo p{
+    margin: 5px 10px;
+    text-align: center;
+}
+.sideinfo li p, .sideinfo .header p{
+    text-align: left;
+}
+
+
+.newspaper-versions{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray
+}
+.newspaper-versions th{
+    padding: 15px;
+}
+.newspaper-versions td{
+    padding: 10px 5px;
+    border: 1px solid gray;
+    border-right: 0;
+    border-left:  0;
+    text-align: center;
+}
+.newspaper-versions tr[data-state] :hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.newspaper-versions tr[data-state='closed']{
+    font-weight: normal;
+}
+.newspaper-versions tr[data-state='opened']{
+    font-weight: bold;
+}
+
+
+.newspaper-versions img{
+    height: 100px;
+}
+.newspaper-versions caption{
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+
+
+.inline{
+    display: inline-block;
+}
+.hidden{
+    display: none;
+}
