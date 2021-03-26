@@ -42,6 +42,10 @@ li[data-logotype = "old"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
     background-position: 4px center;
 }
+li[data-logotype = "old-2015"]{
+    background: url(images/СтарыйГерб-20.png) no-repeat center left;
+    background-position: 4px center;
+}
 li[data-logotype = "new"]{
     background: url(images/Герб-20.png) no-repeat center left;
 }

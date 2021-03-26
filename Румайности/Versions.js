@@ -10,6 +10,10 @@ let versions = [
     { type: 'old', name: '12.07.14', href: '../2014/12.07.14.html' },
     { type: 'old', name: '13.07.14', href: '../2014/13.07.14.html' },
     { type: 'old', name: '14.07.14', href: '../2014/14.07.14.html' },
+
+    { type: 'old-2015', name: '25.03.15', href: '../2015/25.03.15.html' },
+    { type: 'old-2015', name: '26.03.15', href: '../2015/26.03.15.html' },
+
     { type: 'new', name: '2019 год', href: '../2019/21.10.19.html' },
     { type: 'new', name: '2020 год', href: '../2020/21.10.20.html' },
 ];
