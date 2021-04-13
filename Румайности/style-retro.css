@@ -1,0 +1,174 @@
+
+body{
+    background-color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+    font-size: 1.1em;
+    margin: auto;
+    min-width: 608px;
+    max-width: 1050px;
+}
+
+.news h3{
+    margin-top: 30px;
+}
+
+header{
+    border: 1px solid gray;
+    background-color: rgb(236, 236, 236);
+}
+.date{
+    font-size: 1.3em;
+}
+.real-date{
+    padding:15px 30px;
+    border-top: 1px solid gray;
+}
+
+
+main{
+    flex-basis: 70%;
+    flex-grow: 2;
+    min-width: 325px;
+    /* max-width: 725px; */
+    border: 1px solid gray;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.content-list h3{
+    margin: 10px 0;
+}
+
+.content-list ul li{
+    padding: 2px 0;
+}
+
+.cite-user{
+    align-items: center;
+}
+
+img.mini-ava{
+    height: 20px;
+    margin: 0 5px;
+}
+
+img.rage{
+    width: 40px;
+    vertical-align: middle;
+}
+
+
+nav{
+    border: 1px solid gray;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: rgb(236, 236, 236);
+    flex-grow: 1;
+    /* flex-basis: 30%;
+    max-width: 325px; */
+}
+nav ul{
+    margin: 10px;
+}
+.current-link{
+    border: 1px solid gray;
+}
+.statistics{
+    margin: 10px 20px;
+}
+.statistics h5{
+    margin: 5px;
+}
+
+
+.users-reading{
+    margin: 20px 0;
+    color: #6CB2E4;
+    font-family: Arial, Tahoma, Helvetica, sans-serif;
+}
+.users-reading h4{
+    font-size: 15px;
+    margin: 0 5px;
+    font-weight: normal;
+}
+.users-reading .header{
+    padding: 4px 0;
+    border-bottom: 1px solid rgb(184, 184, 184)
+}
+.users-reading .onlines{
+    font-size: 11px;
+}
+
+.users-reading .users a{
+    font-size: 12px;
+    color: #398DD8;
+    text-decoration: none;
+}
+.users-reading p.users{
+    font-size: 12px;
+    color: #398DD8;
+}
+.users-reading .users a:hover{
+    text-decoration: underline;
+}
+
+
+.likebox{
+    border: 0px solid lightblue;
+    border-radius: 4px;
+    margin: 4px;
+    margin-bottom: 10px;
+}
+.likebox a{
+    color: #176094;
+    text-decoration: none;
+}
+
+
+
+article{
+    flex-wrap: nowrap;
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+.justify{
+    justify-content: space-between;
+}
+
+
+
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid gainsboro;
+    margin: 5px;
+    padding: 5px;
+}
+th{
+    border: 1px solid gainsboro;
+    padding: 5px;
+}
+
+p{
+    line-height: 140%;
+}
+
+.journalist{
+    color:green;
+}
+
+
+footer{
+    border: 1px solid gray;
+    background-color: rgb(236, 236, 236);
+}

@@ -42,6 +42,10 @@ li[data-logotype = "old"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
     background-position: 4px center;
 }
+li[data-logotype = "retro-old"]{
+    background: url(images/СтарыйГерб-20.png) no-repeat center left;
+    background-position: 4px center;
+}
 li[data-logotype = "old-2015"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
     background-position: 4px center;
@@ -49,6 +53,9 @@ li[data-logotype = "old-2015"]{
 li[data-logotype = "new"]{
     background: url(images/Герб-20.png) no-repeat center left;
 }
+
+
+
 li[data-logotype] ul{
     list-style: none;
     padding-left: 0;
@@ -127,6 +134,9 @@ header p{
     flex-wrap: wrap;
 }
 
+
+
+
 .line{
     border-bottom: 1px solid gray;
 }
@@ -187,10 +197,10 @@ a + p::before{
     margin: 7px;
 }
 .news figure img{
-    margin: 0;
+    margin: 2px 6px;
 }
 .news figure p, .news figcaption{
-    margin: 0;
+    margin: 0 6px;
     font-style: italic;
     color: rgb(72, 72, 72)
 }
@@ -261,7 +271,6 @@ a + p::before{
 }
 .newspaper-versions tr[data-state] :hover{
     background-color: gainsboro;
-    cursor: pointer;
 }
 
 .newspaper-versions tr[data-state='closed']{
@@ -287,4 +296,10 @@ a + p::before{
 }
 .hidden{
     display: none;
+}
+
+
+
+.image{
+    padding: 5px;
 }

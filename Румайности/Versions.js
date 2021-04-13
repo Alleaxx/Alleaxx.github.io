@@ -1,7 +1,16 @@
 let nav = document.querySelector('#newspapers');
+let navOld = document.querySelector('#newspapers-old');
 
-
+let names = [
+    { type: 'old',          name : 'Классические румайности' },
+    { type: 'retro-old',    name : 'Эпизоды Румайностей' },
+    { type: 'old-2015',     name : 'Румайности 2015' },
+    { type: 'new',          name : 'Современные Румайности' },
+];
 let versions = [
+    { type: 'retro-old', name: '01.01.2013', href: '../2013/01.01.13.html' },
+    { type: 'retro-old', name: '26.01.2013', href: '../2013/26.01.13.html' },
+
     { type: 'old', name: '07.07.14', href: '../2014/07.07.14.html' },
     { type: 'old', name: '08.07.14', href: '../2014/08.07.14.html' },
     { type: 'old', name: '09.07.14', href: '../2014/09.07.14.html' },
@@ -38,10 +47,47 @@ versions.forEach(v => {
     uls[v.type].append(li);
 });
 
-for (const key in uls) {
-    let li = document.createElement('li');
-    li.append(uls[key]);
-
-    li.setAttribute('data-logotype', key);
-    nav.append(li);
+if(nav){
+    for (const key in uls) {
+        let li = document.createElement('li');
+        li.append(uls[key]);
+    
+        li.setAttribute('data-logotype', key);
+        nav.append(li);
+    }
 }
+
+
+if(navOld){
+    let uls = {};
+
+
+    versions.forEach(v => {
+        if(!uls[v.type]){
+            uls[v.type] = document.createElement('ul');
+        }
+        let liOld = document.createElement('li');
+    
+        let add = '';
+        let current = document.head.querySelector('meta[data-date]');
+        if(current && current.getAttribute('data-date') === v.name){
+            add = 'current-link';
+        }
+    
+    
+        liOld.innerHTML = `<a class="${add}" href="${v.href}">${v.name}</a>`;
+        liOld.setAttribute('data-logotype', v.type)
+    
+        uls[v.type].append(liOld);
+    });
+
+    
+    for (const key in uls) {
+        let header = document.createElement('h4');
+        header.innerHTML = names.find(n => n.type == key).name;
+        navOld.append(header);
+        navOld.append(uls[key]);
+    }
+}
+
+
