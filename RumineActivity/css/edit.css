@@ -1,0 +1,49 @@
+﻿
+.count {
+    color: gray;
+    font-size: 0.9em;
+}
+
+.view-table {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .view-table td {
+        border: 1px solid gainsboro;
+    }
+
+    .view-table th {
+        padding: 10px;
+    }
+
+    .view-table input {
+        padding: 8px 6px;
+        border: 0;
+    }
+    .view-table input[type=number]{
+        width: 80%;
+    }
+
+        .view-table input[type=button] {
+            background-color: transparent;
+            cursor: pointer;
+            margin: 0 2px;
+            padding: 5px 2px;
+            width: 40%;
+        }
+
+            .view-table input[type=button]:hover {
+                background-color: transparent;
+                color: red;
+            }
+
+            .view-table input[type=button].save:hover {
+                background-color: transparent;
+                color: green;
+            }
+
+.id {
+    width: 125px;
+}

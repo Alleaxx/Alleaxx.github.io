@@ -1,0 +1,82 @@
+﻿:root {
+    --border-brush: gainsboro;
+    --inner-padding: 0.5em 1em;
+    --selected-color: orange;
+    --background-color: white;
+    --headers-color: whitesmoke;
+    --content-color: white;
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+}
+.row-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.content{
+    padding: 1em;
+}
+
+
+
+td.text, th.text {
+    text-align: left;
+}
+
+td.numbers, th.numbers {
+    text-align: right;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    margin: auto;
+    margin-top: 3em;
+    padding: 0.5em;
+
+    border: 2px solid gainsboro;
+    border-radius: 3px;
+
+    font-size: 2em;
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: Verdana;
+}
+.loading img{
+    height: 56px;
+    margin: 0 15px;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
