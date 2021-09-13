@@ -25,3 +25,6 @@
 
 ## DSS Альтернатива
 [https://alleaxx.github.io/DssAlternative/]
+
+## Таблица Румине ремейк
+<https://alleaxx.github.io/RumineActivity/>
