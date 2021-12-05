@@ -1,7 +1,26 @@
 body{
     font-family: Helvetica, sans-serif;
     font-size: 16px;
+    
 }
+
+.warning{
+    margin: 5px;
+    padding: 10px 5px;
+    border-radius: 2px;
+    border: 1px solid gainsboro;
+    background: lightyellow;
+    font-size: 1em;
+    text-align: center;
+}
+.warning h4{
+    margin: 5px 0;
+    margin-bottom: 8px;
+}
+.warning p{
+    margin: 5px 0;
+}
+
     .activity{
         margin: 5px 25%;
 
