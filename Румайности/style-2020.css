@@ -6,7 +6,7 @@ body{
 
     margin: auto;
     min-width: 608px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 ::selection{
@@ -46,7 +46,7 @@ li[data-logotype = "retro-old"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
     background-position: 4px center;
 }
-li[data-logotype = "old-2015"]{
+li[data-logotype = "old-2015"], li[data-logotype = "old-2016"], li[data-logotype = "old-2017"], li[data-logotype = "old-2018"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
     background-position: 4px center;
 }
@@ -73,6 +73,7 @@ nav a:hover{
 }
 nav a.current-link{
     color: black;
+    background-color: whitesmoke;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
     border-radius: 5px;
@@ -81,6 +82,23 @@ nav a.current:hover{
     cursor: default;
     background-color: inherit;
 }
+nav details summary{
+    cursor: pointer;
+    user-select: none;
+    padding: 0 5px;
+}
+nav details summary:hover{
+    background-color: whitesmoke;
+}
+nav details[open] summary{
+    border-bottom: 1px solid silver;
+}
+nav details summary h4{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
 
 
 main{
