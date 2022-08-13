@@ -44,7 +44,7 @@ let versions = [
 
     { type: 'new', name: '2019 год', href: '../2019/21.10.19.html' },
     { type: 'new', name: '2020 год', href: '../2020/21.10.20.html' },
-    // { type: 'new', name: '2021 год', href: '../2021/2021.html' },
+    { type: 'new', name: '2021 год', href: '../2021/2021.html' },
 ];
 
 let uls = {};

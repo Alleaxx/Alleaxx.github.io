@@ -222,6 +222,14 @@ a + p::before{
     font-style: italic;
     color: rgb(72, 72, 72)
 }
+.news ul.news-list h5, .news ul.news-list h4{
+    margin: 0;
+    margin-left: 5px;
+}
+.news ul.news-list h3{
+    margin: 5px 0;
+    margin-left: 5px;
+}
 
 .rage{
     vertical-align: middle;
@@ -236,6 +244,39 @@ a + p::before{
 .zorreta{
     list-style-image: url(images/2020/zorreta-komiks.jpg);
 }
+
+
+/* ЮЗЕР ГОДА */
+.userOfYear{
+    width: 100%;
+}
+.userOfYear td{
+    font-size: 0.9em;
+}
+.userOfYear td p{
+    margin: 0;
+}
+.userOfYear ol{
+    margin: 4px;
+}
+
+
+/* ЛИТЕРАТУРНЫЕ ФОРМЫ */
+.oda td{
+    font-size: 0.8em;
+    text-align: left;
+}
+.oda .spec p{
+    text-align: left;
+    margin: 0;
+}
+.oda td{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: top;
+}
+
+
 
 
 .sideinfo{
