@@ -11,7 +11,8 @@ body{
 }
 
 .news h3{
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin-bottom: 10px;
 }
 
 header{
