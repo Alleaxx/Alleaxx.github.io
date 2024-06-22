@@ -1,0 +1,37 @@
+.newspaper-versions{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray
+}
+.newspaper-versions th{
+    padding: 2px 4px;
+}
+.newspaper-versions td{
+    padding: 2px 4px;
+    border: 1px solid gray;
+    border-right: 0;
+    border-left:  0;
+    text-align: center;
+}
+
+.newspaper-versions tr[data-state='closed']{
+    font-weight: bold;
+}
+.newspaper-versions tr[data-state='opened']{
+    font-weight: bold;
+}
+
+.newspaper-versions p{
+    margin: 2px 0;
+}
+.newspaper-versions .td-header{
+    background-color: white;
+}
+
+.newspaper-versions img{
+    height: 20px;
+}
+.newspaper-versions caption{
+    font-size: 1.5em;
+    padding: 10px;
+}

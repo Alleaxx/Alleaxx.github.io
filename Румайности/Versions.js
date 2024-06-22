@@ -9,6 +9,7 @@ let names = [
     { type: 'old-2017',     name : 'Румайности 2017' },
     { type: 'old-2018',     name : 'Румайности 2018' },
     { type: 'new',          name : 'Румайности 2019+' },
+    { type: 'simulator',    name : 'Румайности из симулятора' },
 ];
 let versions = [
     { type: 'retro-old', name: '01.01.13', href: '../2013/01.01.13.html' },
@@ -45,6 +46,17 @@ let versions = [
     { type: 'new', name: '2019 год', href: '../2019/21.10.19.html' },
     { type: 'new', name: '2020 год', href: '../2020/21.10.20.html' },
     { type: 'new', name: '2021 год', href: '../2021/2021.html' },
+
+    { type: 'simulator', name: '#1 - 2011', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=11.16.2011&NewsIndex=1' },
+    { type: 'simulator', name: '#2 - 2011-2012', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=05.16.2012&NewsIndex=2' },
+    { type: 'simulator', name: '#3 - 2012', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=08.15.2012&NewsIndex=3' },
+    { type: 'simulator', name: '#4 - 2012', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=10.31.2012&NewsIndex=4' },
+    { type: 'simulator', name: '#5 - Конец 2012', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=12.31.2012&NewsIndex=5' },
+    { type: 'simulator', name: '#6 - Январь 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=01.31.2013&NewsIndex=6' },
+    { type: 'simulator', name: '#7 - Февраль 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=02.28.2013&NewsIndex=7' },
+    { type: 'simulator', name: '#8 - Март 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/1?UsersType=3&Date=03.31.2013&NewsIndex=8' },
+    { type: 'simulator', name: '#22 - Начало 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/2?UsersType=3&Date=02.28.2022&NewsIndex=22' },
+    { type: 'simulator', name: '#23 - Весна 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/scenario/2?UsersType=3&Date=05.31.2022&NewsIndex=23' },
 ];
 
 let uls = {};
@@ -95,8 +107,8 @@ if(navOld){
             add = 'current-link';
         }
     
-    
-        liOld.innerHTML = `<a class="${add}" href="${v.href}">${v.name}</a>`;
+        const blank = v.type === 'simulator' ? 'target="_blank"' : '';
+        liOld.innerHTML = `<a class="${add}" href="${v.href}" ${blank}>${v.name}</a>`;
         liOld.setAttribute('data-logotype', v.type)
     
         uls[v.type].append(liOld);

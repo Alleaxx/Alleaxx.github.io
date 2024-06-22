@@ -36,7 +36,7 @@ nav h4{
 
 li[data-logotype]{
     list-style: none;
-    padding-left: 35px;
+    padding-left: 30px;
 }
 li[data-logotype = "old"]{
     background: url(images/СтарыйГерб-20.png) no-repeat center left;
@@ -53,7 +53,11 @@ li[data-logotype = "old-2015"], li[data-logotype = "old-2016"], li[data-logotype
 li[data-logotype = "new"]{
     background: url(images/Герб-20.png) no-repeat center left;
 }
-
+li[data-logotype = "simulator"]{
+    background: url(images/GerbNew.png) no-repeat center left;
+    background-size: 20px 20px;
+    font-size: 0.9em;
+}
 
 
 li[data-logotype] ul{
@@ -140,6 +144,9 @@ header p{
 .header-news h2{
     margin: 0;
 }
+.row-centered{
+    justify-content: center;
+}
 
 
 .column{
@@ -216,6 +223,7 @@ a + p::before{
 }
 .news figure img{
     margin: 2px 6px;
+    max-width: 100%;
 }
 .news figure p, .news figcaption{
     margin: 0 6px;
@@ -313,42 +321,6 @@ a + p::before{
 }
 
 
-.newspaper-versions{
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid gray
-}
-.newspaper-versions th{
-    padding: 15px;
-}
-.newspaper-versions td{
-    padding: 10px 5px;
-    border: 1px solid gray;
-    border-right: 0;
-    border-left:  0;
-    text-align: center;
-}
-.newspaper-versions tr[data-state] :hover{
-    background-color: gainsboro;
-}
-
-.newspaper-versions tr[data-state='closed']{
-    font-weight: normal;
-}
-.newspaper-versions tr[data-state='opened']{
-    font-weight: bold;
-}
-
-
-.newspaper-versions img{
-    height: 100px;
-}
-.newspaper-versions caption{
-    font-size: 1.5em;
-    padding: 10px;
-}
-
-
 
 .inline{
     display: inline-block;
@@ -361,4 +333,34 @@ a + p::before{
 
 .image{
     padding: 5px;
+}
+
+.inprogress{
+    background-color: #fffbca;
+}
+.undefined{
+    background-color: pink;
+}
+
+.main-news-ul{
+
+}
+.main-news-ul ul li a{
+    color: black;
+}
+.main-news-ul ul li a:hover{
+    color: #624000;
+}
+
+.period{
+    color: gray;
+    font-size: 0.85em;
+    /*padding: 2px 6px;
+     border-left: 4px solid gainsboro; 
+    margin-left: 4px;*/
+}
+.period .info{
+    /* color: gray;
+    margin-right: 4px;
+    margin-left: 2px; */
 }
