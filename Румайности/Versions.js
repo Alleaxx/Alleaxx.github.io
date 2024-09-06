@@ -55,13 +55,13 @@ let versions = [
     { type: 'simulator', name: '#6 - Январь 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/6' },
     { type: 'simulator', name: '#7 - Февраль 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/7' },
     { type: 'simulator', name: '#8 - Март 2013', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/8' },
-    { type: 'simulator', name: '#19 - 2019', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/19' },
-    { type: 'simulator', name: '#20 - 2020', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/20' },
-    { type: 'simulator', name: '#21 - 2021', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/21' },
-    { type: 'simulator', name: '#22 - Начало 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/22' },
-    { type: 'simulator', name: '#23 - Весна 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/23' },
-    { type: 'simulator', name: '#24 - Конец 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/24' },
-    { type: 'simulator', name: '#25 - 2023', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/25' },
+    { type: 'simulator', name: '#19 - 2019', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2019/1/1' },
+    { type: 'simulator', name: '#20 - 2020', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2020/1/1' },
+    { type: 'simulator', name: '#21 - 2021', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2021/1/1' },
+    { type: 'simulator', name: '#22 - Начало 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2022/1/1' },
+    { type: 'simulator', name: '#23 - Весна 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2022/3/1' },
+    { type: 'simulator', name: '#24 - Конец 2022', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2022/6/1' },
+    { type: 'simulator', name: '#25 - 2023', href: 'https://alleaxxrmca.github.io/RumineSimulator/news/dated/2023/1/1' },
 ];
 
 let uls = {};
